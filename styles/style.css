@@ -1,0 +1,82 @@
+/* General Styling */
+body {
+    font-family: "Georgia", serif;
+    margin: 0;
+    background: linear-gradient(to bottom right, lightgrey, whitesmoke, lightcoral);
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.content {
+    margin-top: 70px;
+    padding: 20px;
+    text-align: center;
+}
+
+.discord-btn {
+    background-color: #7289DA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.discord-btn:hover {
+    background-color: #5c6bc0;
+}
+
+/* Cards and Animations */
+.card {
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
