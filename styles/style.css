@@ -2,52 +2,53 @@
 body {
     font-family: "Georgia", serif;
     margin: 0;
-    background: linear-gradient(to bottom right, lightgrey, whitesmoke, lightcoral);
-    color: #333;
+    background: linear-gradient(135deg, #2c2c2c, #4d4d4d, #e57373 2%);
+    color: #f3f3f3;
     line-height: 1.6;
 }
 
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: rgba(50, 50, 50, 0.9);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
 .navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: space-around;
+    list-style: none;
+    padding: 10px;
+}
+
+.navbar li {
+    margin: 0 15px;
 }
 
 .navbar a {
     text-decoration: none;
-    color: #333;
-    padding: 10px 20px;
+    color: #e3e3e3;
+    padding: 5px 10px;
 }
 
 .navbar a:hover {
-    background: rgba(0, 0, 0, 0.05);
+    color: #ffffff;
+    background: rgba(200, 200, 200, 0.1);
     border-radius: 5px;
 }
 
-.content {
-    margin-top: 70px;
-    padding: 20px;
-    text-align: center;
-}
-
+/* Buttons */
 .discord-btn {
     background-color: #7289DA;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px 20px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     cursor: pointer;
 }
 
@@ -55,28 +56,20 @@ body {
     background-color: #5c6bc0;
 }
 
-/* Cards and Animations */
-.card {
-    margin: 20px auto;
+/* Image Placeholders */
+.photo-placeholder {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #4d4d4d, #2c2c2c);
+    margin: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Footer */
+footer {
+    text-align: center;
     padding: 10px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.fade-in {
-    animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    background: #333;
+    color: #ddd;
 }
