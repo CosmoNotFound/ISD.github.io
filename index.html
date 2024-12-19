@@ -3,36 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISD | Home</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>ISD Operations Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            background: linear-gradient(135deg, #f8f8f8, #e8e8e8, #f4c2c2);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #555;
+        }
+
+        .welcome-section {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #f4f4f4, #fddede);
+        }
+
+        .welcome-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #6c63ff;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #5a52d6;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <header class="navbar">
+    <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Who We Are</a></li>
-                <li><a href="leadership.html">Our Leadership</a></li>
-                <li><a href="operations.html">De-Classified Operations</a></li>
-                <li><a href="status.html">Current Status</a></li>
-                <li><a href="join.html">Join Us</a></li>
-            </ul>
+            <a href="#">Home</a>
+            <a href="#operations">Operations</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <main class="home-content">
-        <h1>Welcome to the Internal Security Department</h1>
-        <p>The “Foundation within the Foundation” ensures internal security at all levels.</p>
-        <div class="team-photos">
-            <div class="photo-placeholder"></div>
-            <div class="photo-placeholder"></div>
-            <div class="photo-placeholder"></div>
-            <div class="photo-placeholder"></div>
-            <div class="photo-placeholder"></div>
+    <section class="welcome-section">
+        <h1>Welcome to the Operations Hub</h1>
+        <p>Your portal to explore declassified missions and more.</p>
+        <a href="#" class="cta-button">Join Communications Server Today</a>
+    </section>
+
+    <section id="operations" class="section">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Declassified Operations</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Operation Image">
+                <h3>Operation Alpha</h3>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Operation Image">
+                <h3>Operation Beta</h3>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Operation Image">
+                <h3>Operation Gamma</h3>
+            </div>
         </div>
-    </main>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Internal Security Department</p>
+        &copy; 2024 Operations Hub. All rights reserved.
     </footer>
 </body>
 </html>
