@@ -14,11 +14,9 @@
 
         body {
             font-family: 'Merriweather', serif;
-            background: linear-gradient(135deg, #f4f4f4, #d8d8d8);
-            color: #333;
+            background: linear-gradient(135deg, #333, #444, #555);
+            color: #f8f8f8;
             line-height: 1.6;
-            background-image: url('https://via.placeholder.com/1920x1080'); /* Abstract texture placeholder */
-            background-size: cover;
         }
 
         header {
@@ -26,8 +24,8 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             z-index: 1000;
         }
 
@@ -41,27 +39,35 @@
         }
 
         nav a {
-            color: #333;
+            color: #f8f8f8;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            color: #555;
+            color: #ff4c4c;
         }
 
-        .section {
-            padding: 6rem 2rem;
+        .welcome-section {
             text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #444, #555, #333);
         }
 
-        .section h2 {
+        .welcome-section h1 {
             font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-section p {
+            font-size: 1.2rem;
             margin-bottom: 2rem;
         }
 
         .cta-button {
-            background-color: #6c63ff;
+            display: inline-block;
+            background-color: #ff4c4c;
             color: #fff;
             padding: 0.8rem 2rem;
             font-size: 1rem;
@@ -71,167 +77,151 @@
         }
 
         .cta-button:hover {
-            background-color: #5a52d6;
+            background-color: #ff2b2b;
         }
 
-        .leadership {
+        .section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #444, #555, #666);
+            color: #f8f8f8;
+        }
+
+        .cards {
             display: flex;
             flex-wrap: wrap;
+            gap: 1.5rem;
             justify-content: center;
-            gap: 2rem;
         }
 
-        .leader {
-            background: #fff;
+        .card {
+            background: #333;
             border-radius: 10px;
-            padding: 1rem;
-            width: 250px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .leader img {
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #555;
         }
 
-        .leader h3 {
+        .card h3 {
             font-size: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .bio {
-            display: none;
-            margin-top: 1rem;
-            text-align: left;
-        }
-
-        .bio p {
-            font-size: 1rem;
-        }
-
-        .leader:hover .bio {
-            display: block;
+            margin: 1rem;
         }
 
         footer {
             text-align: center;
             padding: 2rem;
-            background: #333;
+            background: #222;
             color: #fff;
+            font-size: 0.9rem;
         }
 
-        .operation {
-            margin-top: 2rem;
-            background: linear-gradient(135deg, #f4f4f4, #e8e8e8);
-            padding: 4rem 2rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .expandable-bio {
+            display: none;
+            padding: 1rem;
+            background: #444;
+            color: #ddd;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+
+        .bio-button {
+            background: #ff4c4c;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .bio-button:hover {
+            background: #ff2b2b;
         }
 
         .join-button {
-            background-color: #ff6f61;
+            background: #ff4c4c;
             color: #fff;
             padding: 1rem 2rem;
-            font-size: 1rem;
+            font-size: 1.2rem;
             border-radius: 5px;
             text-decoration: none;
-            margin-top: 2rem;
-            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-top: 1rem;
         }
 
         .join-button:hover {
-            background-color: #ff5b4c;
+            background: #ff2b2b;
         }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="#who-we-are">Who We Are</a>
-            <a href="#leadership">Our Leadership</a>
-            <a href="#operations">De-Classified Operations</a>
-            <a href="#status">Current Status</a>
-            <a href="#join">Join Us</a>
+            <a href="home.html">Home</a>
+            <a href="operations.html">Operations</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <section id="who-we-are" class="section">
-        <h2>Who We Are</h2>
-        <p>The ISD is the secretive internal security force of the SCP Foundation, tasked with handling breaches, leaks, and potential threats from within. Known as the "Foundation within the Foundation," the ISD operates under utmost secrecy.</p>
+    <section class="welcome-section">
+        <h1>Welcome to the ISD Operations Hub</h1>
+        <p>Your portal to explore declassified missions and more.</p>
+        <a href="contact.html" class="cta-button">Join Communications Server Today</a>
     </section>
 
-    <section id="leadership" class="section">
-        <h2>Our Leadership</h2>
-        <div class="leadership">
-            <div class="leader">
-                <img src="https://via.placeholder.com/250" alt="Altay">
-                <h3>Altay - Founder</h3>
-                <div class="bio">
-                    <p>Altay was the first to establish the ISD, laying the foundation for its operations and secretive nature.</p>
+    <!-- Home Section -->
+    <section class="section" id="home">
+        <h2 style="text-align: center;">ISD Members</h2>
+        <div class="cards">
+            <!-- Member 1 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Member Image">
+                <h3>Severed - Founder</h3>
+                <button class="bio-button" onclick="toggleBio('bio1')">View Bio</button>
+                <div class="expandable-bio" id="bio1">
+                    <p>Severed founded the ISD to ensure internal security and prevent traitors within the Foundation.</p>
                 </div>
             </div>
-            <div class="leader">
-                <img src="https://via.placeholder.com/250" alt="Russell A.">
-                <h3>Russell A. - Director</h3>
-                <div class="bio">
-                    <p>Russell A. has been pivotal in shaping the ISD's current form, focusing on internal intelligence and security measures.</p>
-                </div>
-            </div>
-            <div class="leader">
-                <img src="https://via.placeholder.com/250" alt="Aurora">
+            <!-- Member 2 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Member Image">
                 <h3>Aurora - Director</h3>
-                <div class="bio">
-                    <p>Aurora is known for her strategic brilliance and serves as the current director, overseeing all ISD operations.</p>
-                </div>
-            </div>
-            <div class="leader">
-                <img src="https://via.placeholder.com/250" alt="Jinx">
-                <h3>Jinx - Chief of Operations</h3>
-                <div class="bio">
-                    <p>Jinx oversees all covert operations, ensuring that ISD's efforts remain a step ahead of potential threats.</p>
-                </div>
-            </div>
-            <div class="leader">
-                <img src="https://via.placeholder.com/250" alt="Avocet">
-                <h3>Avocet - Head of Intelligence</h3>
-                <div class="bio">
-                    <p>Avocet leads the ISD’s intelligence division, gathering and analyzing data to prevent internal leaks.</p>
-                </div>
-            </div>
-            <div class="leader">
-                <img src="https://via.placeholder.com/250" alt="Universe">
-                <h3>Universe - Chief Analyst</h3>
-                <div class="bio">
-                    <p>Universe is known for their unparalleled analytical skills, focusing on interpreting complex data to guide decisions.</p>
+                <button class="bio-button" onclick="toggleBio('bio2')">View Bio</button>
+                <div class="expandable-bio" id="bio2">
+                    <p>Aurora leads the ISD operations with a focus on intelligence gathering and security enforcement.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="operations" class="section">
-        <h2>De-Classified Operations</h2>
-        <div class="operation">
-            <h3>Operation Shadowstrike</h3>
-            <p>Details coming soon...</p>
-        </div>
-    </section>
-
-    <section id="status" class="section">
-        <h2>Current Status And Information</h2>
-        <p>The ISD is actively deployed at multiple sites around the globe, with the current high command overseeing operations from headquarters.</p>
-        <p>Current status: Operational</p>
-    </section>
-
-    <section id="join" class="section">
+    <!-- Join Section -->
+    <section class="section" id="join">
         <h2>Join Us</h2>
-        <p>Ready to join the ISD? Apply now by clicking the button below to get started!</p>
-        <a href="https://discord.com/invite/yourdiscordlink" class="join-button">Join the Discord Server</a>
-        <p>Recruitment information coming soon...</p>
+        <a href="https://discord.com/invite/xyz" class="join-button">Join the Discord</a>
+        <p>Recruitment details will be updated soon. Check back later for more information.</p>
     </section>
 
     <footer>
         &copy; 2024 ISD Operations Hub. All rights reserved.
     </footer>
+
+    <script>
+        function toggleBio(bioId) {
+            var bio = document.getElementById(bioId);
+            bio.style.display = (bio.style.display === "none" || bio.style.display === "") ? "block" : "none";
+        }
+    </script>
 </body>
 </html>
