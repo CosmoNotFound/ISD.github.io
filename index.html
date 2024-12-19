@@ -14,9 +14,11 @@
 
         body {
             font-family: 'Merriweather', serif;
-            background: linear-gradient(135deg, #f8f8f8, #e8e8e8, #f4c2c2);
+            background: linear-gradient(135deg, #f4f4f4, #d8d8d8);
             color: #333;
             line-height: 1.6;
+            background-image: url('https://via.placeholder.com/1920x1080'); /* Abstract texture placeholder */
+            background-size: cover;
         }
 
         header {
@@ -31,7 +33,7 @@
 
         nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             max-width: 1200px;
             margin: auto;
@@ -41,7 +43,6 @@
         nav a {
             color: #333;
             text-decoration: none;
-            margin: 0 1rem;
             font-weight: bold;
         }
 
@@ -49,24 +50,17 @@
             color: #555;
         }
 
-        .welcome-section {
-            text-align: center;
+        .section {
             padding: 6rem 2rem;
-            background: linear-gradient(135deg, #f4f4f4, #fddede);
+            text-align: center;
         }
 
-        .welcome-section h1 {
+        .section h2 {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .welcome-section p {
-            font-size: 1.2rem;
             margin-bottom: 2rem;
         }
 
         .cta-button {
-            display: inline-block;
             background-color: #6c63ff;
             color: #fff;
             padding: 0.8rem 2rem;
@@ -80,41 +74,45 @@
             background-color: #5a52d6;
         }
 
-        .section {
-            padding: 4rem 2rem;
-        }
-
-        .cards {
+        .leadership {
             display: flex;
             flex-wrap: wrap;
-            gap: 1.5rem;
             justify-content: center;
+            gap: 2rem;
         }
 
-        .card {
+        .leader {
             background: #fff;
             border-radius: 10px;
+            padding: 1rem;
+            width: 250px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .card img {
+        .leader img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-bottom: 1px solid #eee;
         }
 
-        .card h3 {
+        .leader h3 {
             font-size: 1.5rem;
-            margin: 1rem;
+            margin-top: 1rem;
+        }
+
+        .bio {
+            display: none;
+            margin-top: 1rem;
+            text-align: left;
+        }
+
+        .bio p {
+            font-size: 1rem;
+        }
+
+        .leader:hover .bio {
+            display: block;
         }
 
         footer {
@@ -122,46 +120,118 @@
             padding: 2rem;
             background: #333;
             color: #fff;
-            font-size: 0.9rem;
+        }
+
+        .operation {
+            margin-top: 2rem;
+            background: linear-gradient(135deg, #f4f4f4, #e8e8e8);
+            padding: 4rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .join-button {
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .join-button:hover {
+            background-color: #ff5b4c;
         }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="#">Home</a>
-            <a href="#operations">Operations</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#who-we-are">Who We Are</a>
+            <a href="#leadership">Our Leadership</a>
+            <a href="#operations">De-Classified Operations</a>
+            <a href="#status">Current Status</a>
+            <a href="#join">Join Us</a>
         </nav>
     </header>
 
-    <section class="welcome-section">
-        <h1>Welcome to the Operations Hub</h1>
-        <p>Your portal to explore declassified missions and more.</p>
-        <a href="#" class="cta-button">Join Communications Server Today</a>
+    <section id="who-we-are" class="section">
+        <h2>Who We Are</h2>
+        <p>The ISD is the secretive internal security force of the SCP Foundation, tasked with handling breaches, leaks, and potential threats from within. Known as the "Foundation within the Foundation," the ISD operates under utmost secrecy.</p>
     </section>
 
-    <section id="operations" class="section">
-        <h2 style="text-align: center; margin-bottom: 2rem;">Declassified Operations</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="https://via.placeholder.com/300" alt="Operation Image">
-                <h3>Operation Alpha</h3>
+    <section id="leadership" class="section">
+        <h2>Our Leadership</h2>
+        <div class="leadership">
+            <div class="leader">
+                <img src="https://via.placeholder.com/250" alt="Altay">
+                <h3>Altay - Founder</h3>
+                <div class="bio">
+                    <p>Altay was the first to establish the ISD, laying the foundation for its operations and secretive nature.</p>
+                </div>
             </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300" alt="Operation Image">
-                <h3>Operation Beta</h3>
+            <div class="leader">
+                <img src="https://via.placeholder.com/250" alt="Russell A.">
+                <h3>Russell A. - Director</h3>
+                <div class="bio">
+                    <p>Russell A. has been pivotal in shaping the ISD's current form, focusing on internal intelligence and security measures.</p>
+                </div>
             </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300" alt="Operation Image">
-                <h3>Operation Gamma</h3>
+            <div class="leader">
+                <img src="https://via.placeholder.com/250" alt="Aurora">
+                <h3>Aurora - Director</h3>
+                <div class="bio">
+                    <p>Aurora is known for her strategic brilliance and serves as the current director, overseeing all ISD operations.</p>
+                </div>
+            </div>
+            <div class="leader">
+                <img src="https://via.placeholder.com/250" alt="Jinx">
+                <h3>Jinx - Chief of Operations</h3>
+                <div class="bio">
+                    <p>Jinx oversees all covert operations, ensuring that ISD's efforts remain a step ahead of potential threats.</p>
+                </div>
+            </div>
+            <div class="leader">
+                <img src="https://via.placeholder.com/250" alt="Avocet">
+                <h3>Avocet - Head of Intelligence</h3>
+                <div class="bio">
+                    <p>Avocet leads the ISD’s intelligence division, gathering and analyzing data to prevent internal leaks.</p>
+                </div>
+            </div>
+            <div class="leader">
+                <img src="https://via.placeholder.com/250" alt="Universe">
+                <h3>Universe - Chief Analyst</h3>
+                <div class="bio">
+                    <p>Universe is known for their unparalleled analytical skills, focusing on interpreting complex data to guide decisions.</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <section id="operations" class="section">
+        <h2>De-Classified Operations</h2>
+        <div class="operation">
+            <h3>Operation Shadowstrike</h3>
+            <p>Details coming soon...</p>
+        </div>
+    </section>
+
+    <section id="status" class="section">
+        <h2>Current Status And Information</h2>
+        <p>The ISD is actively deployed at multiple sites around the globe, with the current high command overseeing operations from headquarters.</p>
+        <p>Current status: Operational</p>
+    </section>
+
+    <section id="join" class="section">
+        <h2>Join Us</h2>
+        <p>Ready to join the ISD? Apply now by clicking the button below to get started!</p>
+        <a href="https://discord.com/invite/yourdiscordlink" class="join-button">Join the Discord Server</a>
+        <p>Recruitment information coming soon...</p>
+    </section>
+
     <footer>
-        &copy; 2024 Operations Hub. All rights reserved.
+        &copy; 2024 ISD Operations Hub. All rights reserved.
     </footer>
 </body>
 </html>
